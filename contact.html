@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/contactform.css">
+</head>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Contact Us</h2>
+                <hr>
+            </div>
+            <!-- Hidden Access Key for Web3Forms -->
+            <input type="hidden" name="access_key" value="b954ecfe-5aca-42e3-b158-52ec49adc7cc">
+
+            <!-- Input Fields -->
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="contact-inputs" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            
+            <label for="number">Your Contact Number</label>
+            <input type="tel" id="number" name="number" placeholder="Your Contact Number" class="contact-inputs" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            
+            <!-- Submit Button -->
+            <button type="submit">Submit <img src="images/arrow_icon.png" alt="Submit Icon"></button>
+        </form>
+        <!-- Decorative Image -->
+        <div class="contact-right">
+            <img src="images/right_img.png" alt="Decorative Contact Image">
+        </div>
+    </div>
+</body>
+</html>
