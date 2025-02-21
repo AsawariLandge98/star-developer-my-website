@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="tp.html" aria-label="Go to Home section">Home</a></li>
+            <li><a href="aboutus.html" aria-label="Go to About section">About</a></li>
+            <li><a href="services.html" aria-label="Go to Services section">Services</a></li>
+            <li><a href="contact.html" aria-label="Go to Contact section">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            &#9776;
+        </button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right">
+            <h1>Welcome to My Website</h1>
+            <div class="changing-text">
+                <span>Web Development</span><br>
+                <span>UI/UX Design</span>
+                <span>Maintenance Services</span>
+            </div>
+            <div class="cta-buttons">
+                <button class="btn-primary" aria-label="View my contact" onclick="window.location.href='tel:+919545788494'">
+                    Contact me
+                </button>
+                <button class="btn-secondary" aria-label="Hire me for your project"><a href="contactform.html">Hire me</a></button>
+                </div>
+        </div>
+        <img src="images/c-removebg-preview.png" alt="Hero Image of Developer" class="hero-image" data-aos="fade-left">
+    </div>
+</section>
+
+<section id="about">
+    <h2 data-aos="fade-up">About Me</h2>
+    <p data-aos="fade-up">I am a passionate web developer specializing in creating modern, responsive websites tailored to meet client needs. My expertise includes front-end and back-end development, UI/UX design, and website maintenance.</p>
+</section>
+
+<section id="services">
+    <h2 data-aos="fade-up">My Services</h2>
+    <div class="services-grid" data-aos="zoom-in">
+        <div class="service-card" tabindex="0">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            <h3>Web Development</h3>
+            <p>Building modern, fast, and responsive websites tailored to your needs.</p>
+        </div>
+        <div class="service-card" tabindex="0">
+            <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+            <h3>UI/UX Design</h3>
+            <p>Creating user-friendly designs to improve user engagement.</p>
+        </div>
+        <div class="service-card" tabindex="0">
+            <i class="fa fa-tools" aria-hidden="true"></i>
+            <h3>Maintenance</h3>
+            <p>Providing updates, bug fixes, and support to keep your website running smoothly.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2 data-aos="fade-up">What My Clients Say</h2>
+    <div class="testimonial-slider" data-aos="fade-up">
+        <div class="testimonial">
+            <p>"Fantastic service! Highly recommend for professional web development."</p>
+            <span>- John Doe</span>
+        </div>
+        <div class="testimonial">
+            <p>"The UI/UX design exceeded our expectations!"</p>
+            <span>- Jane Smith</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+
+    <h2 data-aos="fade-up">Contact Me</h2>
+    <form data-aos="fade-up">
+
+        <input type="hidden" name="access_key" value="b954ecfe-5aca-42e3-b158-52ec49adc7cc">
+        <input type="text" placeholder="Your Name" aria-label="Enter your name" required>
+        <input type="email" placeholder="Your Email" aria-label="Enter your email" required>
+        <textarea placeholder="Your Message" rows="5" aria-label="Enter your message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:asawarilandge48@gmail.com.com">asawarilandge48@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919545788494">+919545788494</a></p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" class="social-link" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+919545788494" class="social-link" aria-label="Message us on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+919545788494" class="social-link" aria-label="Call us"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="footer-developed">
+        <p>Developed by <strong><a href="https://wa.me/+919545788494">Asawari Landge</a></strong></p>
+    </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8679;</button>
+
+<script>
+    // AOS Initialization
+    AOS.init();
+
+    // Back-to-Top Button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+</script>
+
+</body>
+</html>
